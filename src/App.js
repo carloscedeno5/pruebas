@@ -15,6 +15,17 @@ class Hello extends Component {
   }
 }
 
+class Text extends Component{
+  render(){
+    return <div>
+      <p>{this.props.text}</p>
+      <p>{this.props.num}</p>
+      <p>{this.props.boolean}</p>
+    </div>
+  }
+}
+// JSON.stringify()
+
 class App extends Component {
   render() {
     return (
@@ -23,10 +34,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <Hello title='Hello from props'/>
         </header>
-        <h3>Estamos aprendiendo react</h3>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Text num={2} text='Texto en string' boolean={false}/>
       </div>
     );
   }

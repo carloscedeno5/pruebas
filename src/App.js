@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import WeatherLocation from './components/WeatherLocation';
 
 // function Hello (props){
 //   return <h2>{props.title}</h2>
@@ -25,52 +24,49 @@ import './App.css';
 //   }
 // }
 // JSON.stringify()
-class Title extends Component{
-  render (){
-    return <h1>{this.props.text}</h1>
+// class Title extends Component{
+//   render (){
+//     return <h1>{this.props.text}</h1>
 
-  }
-}
+//   }
+// }
 
 // Title.defaultProps= {
 //   text: 'Titulo por defecto'
 // }
 
 
-class Contador extends Component{
-  constructor (props){
-    super(props)
-    this.state = {contador: this.props.contadorinicial}
-    setInterval(() => {
-      this.setState({ contador: this.state.contador+1})
-    },1000)
-  }
-  render (){
-    return <Contadornum numero = {this.state.contador}/>
-  }
-}
+// class Contador extends Component{
+//   constructor (props){
+//     super(props)
+//     this.state = {contador: this.props.contadorinicial}
+//     setInterval(() => {
+//       this.setState({ contador: this.state.contador+1})
+//     },1000)
+//   }
+//   render (){
+//     return <Contadornum numero = {this.state.contador}/>
+//   }
+// }
 
-class Contadornum extends Component{
-  render (){
-    return <span>{this.props.numero}</span>
-  }
-}
-Contador.defaultProps = {
-  contadorinicial: 0
-}
+// class Contadornum extends Component{
+//   render (){
+//     return <span>{this.props.numero}</span>
+//   }
+// }
+// Contador.defaultProps = {
+//   contadorinicial: 0
+// }
 class App extends Component {
   
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Title text='Mi titulo'/>
+          {/* <Title text='Mi titulo'/> */}
           {/* <Hello title='Hello from props'/> */}
-          </header>
-          <Contador contadorinicial={0}/>
+          {/* <Contador contadorinicial={0}/> */}
           {/* <Text num={2} text='Texto en string' boolean={false}/>  */}
-
+          <WeatherLocation/>
       </div>
     );
   }

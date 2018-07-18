@@ -2,7 +2,7 @@ import React from 'react';
 
 const WeatherExtrainfo = ({ humidity, wind}) => (
     <div>
-        {/* template script creo xd */}
+        {/* template literarios creo xd */}
         <span>{`${humidity} % | `}</span>
         <span>{`${wind} wind`}</span>
     </div>
